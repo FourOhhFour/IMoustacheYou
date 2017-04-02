@@ -8,13 +8,14 @@ $(document).ready(function(){
         console.log(faces);
         //imageStore(faces);
         for (var i = 0; i < faces.length; i++) {
+            //draw rectangle around any faces
             $('<div>', {
                 'class':'face',
                 'css': {
                     'position': 'absolute',
-                    'left':     (faces[i].x * faces[i].scaleX) / 1.4 + 'px',
+                    'left':     faces[i].x * faces[i].scaleX + 'px',
                     'top':      faces[i].y * faces[i].scaleY + 'px',
-                    'width':    1.5 * (faces[i].width  * faces[i].scaleX) + 'px',
+                    'width':    1.2 * (faces[i].width  * faces[i].scaleX) + 'px',
                     'height':   1.5 * (faces[i].height * faces[i].scaleY) + 'px'
                 }
             })
