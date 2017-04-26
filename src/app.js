@@ -2,6 +2,7 @@
 
 $(document).ready(function(){
 
+  var blockScroller = $("#main-wrap").blockScroll();
 
   $('#picture').faceDetection({
       complete: function(faces){
@@ -32,7 +33,17 @@ $(document).ready(function(){
     localStorage.setItem('image0', img);
     console.log('image saved to local storage');
   }
+  /*var blockScroller = $("#main-wrap").blockScroll();
 
+  $(function() {
+        var blockScroller = $("#main-wrap").blockScroll();
+  });*/
+
+  $("#main-wrap").blockScroll({
+   scrollDuration: [2],
+   fadeBlocks: [true],
+   fadeDuration: [300]
+});
 
 });//end doc ready
 
