@@ -24,9 +24,14 @@ $('#finalise-button').click(function(){
         complete: function(faces){
           console.log(faces);
           var imageObj2 = new Image();
-          imageObj2.src = '../assets/images/bandit.png';
+          var val = $('input[name=moustache]:checked', '#form').val()
+          imageObj2.src = '../assets/images/' + val + '.png';
           imageObj2.onload = function() {
-            ctx.drawImage(imageObj2, (faces[0].x + faces[0].width/2)-imageObj2.width/2, (faces[0].y + faces[0].height / 2));
+            var x = (faces[0].x + faces[0].width/2) - ((faces[0].width/4)*3)/2 + 7;
+            var y = faces[0].y + (faces[0].height/4)*3
+            var h = (faces[0].width/4) * 3;
+            ctx.drawImage(imageObj2, x, y, h, h * imageObj2.height / imageObj2.width);
+            //ctx.drawImage(imageObj2, ((faces[0].x + faces[0].width/2)-((imageObj2.width*((faces[0].width/4)*3))/2)), (faces[0].y + ((faces[0].height/3)*2)), ((faces[0].width/4)*3), ((faces[0].width/4)*3));
           };
         }
       });//end pic.faceDetection

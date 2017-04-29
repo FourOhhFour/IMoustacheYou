@@ -49,12 +49,13 @@ h3{
 }
 
 #output-image{
-  width: 900px;
+  max-width: 900px;
+  height: auto;
   margin: auto;
 }
 
-#output-image img{
-  width: 100%;
+#output-img{
+  max-width: 100%;
   height: auto;
   max-height: 580px;
   overflow: hidden;
@@ -114,6 +115,12 @@ h3{
 .moustache-image{
   width: 150px;
   height: 150px;
+}
+
+.tache{
+    width: 300px;
+    height: auto;
+    margin: 1%;
 }
 
 
