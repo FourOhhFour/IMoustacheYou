@@ -45,7 +45,7 @@ $(document).ready(function(){
    fadeDuration: [300]
 });
 
-});//end doc ready
+
 
 
 /*var canvas = document.getElementById("canvas");
@@ -76,3 +76,45 @@ function loadImage(src, onload) {
 
     return img;
 }*/
+
+//=====================================================================
+//        Animate page down pointer
+//=====================================================================
+
+function loop() {
+        $('#down-pointer').animate({'bottom': '10'}, {
+            duration: 400,
+            complete: function() {
+                $('#down-pointer').animate({bottom: 0}, {
+                    duration: 400,
+                    complete: loop});
+            }});
+    }
+    loop();
+
+});//end doc ready
+
+//=====================================================================
+//        Display uploaded image
+//=====================================================================
+
+
+ function processFiles(){
+    var file = document.getElementById('fileUpload').files[0];
+
+    var reader = new FileReader();
+    reader.onload = function()
+    {
+    	var img = new Image();
+    	img.src = reader.result;
+      img.id = 'output-img';
+    	document.getElementById('output-image').appendChild(img);
+    }
+    reader.onerror = function()
+    {
+    	alert("There was an error reading the file");
+    }
+    reader.readAsDataURL(file);
+
+    $('#placeholder').remove();
+}
