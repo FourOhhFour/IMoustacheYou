@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3D Testing</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<input type='file' id='getval' name="background-image" /><br/><br/>
+
+
+
+<style>
+#test{
+   background-image:url('');
+   background-size:cover;
+   background-position: center;
+	 height: 800px;
+	 width: 800px;
+
+
+}
+</style>
+
+			<div class="project-list">
+				<div class="project">
+					<div class="project__card">
+
+						<a href="" class="project__image"><img id='test' width=600 height=400 alt=""></img></a>
+
+						<div class="project__detail">
+							<h2 class="project__title"><a href="#"></a></h2>
+							<small class="project__category"><a href="#"></a></small>
+						</div>
+					</div>
+				</div>
+		</div>
+
+
+
+		</div>
+	</div>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.1.min.js"><\\/script>')</script>
+	<!-- Place this tag right after the last button or just before your close body tag. -->
+	<script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+	<script>window.twttr = (function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0],
+	    t = window.twttr || {};
+	  if (d.getElementById(id)) return t;
+	  js = d.createElement(s);
+	  js.id = id;
+	  js.src = "https://platform.twitter.com/widgets.js";
+	  fjs.parentNode.insertBefore(js, fjs);
+
+	  t._e = [];
+	  t.ready = function(f) {
+	    t._e.push(f);
+	  };
+
+	  return t;
+	}(document, "script", "twitter-wjs"));</script>
+	<script src="dist/js/jquery.hover3d.js" ></script>
+
+	<script>
+		$(document).ready(function(){
+			$(".project").hover3d({
+				selector: ".project__card"
+			});
+
+			$(".movie").hover3d({
+				selector: ".movie__card",
+				shine: true,
+				sensitivity: 20,
+			});
+		});
+
+	</script>
+
+	<script>
+	  document.getElementById('getval').addEventListener('change', readURL, true);
+	function readURL(){
+	   var file = document.getElementById("getval").files[0];
+	   var reader = new FileReader();
+	   reader.onloadend = function(){
+	      document.getElementById('test').style.backgroundImage = "url(" + reader.result + ")";
+	   }
+	   if(file){
+	      reader.readAsDataURL(file);
+	    }else{
+	    }
+	}
+	</script>
+
+
+</body>
+</html>

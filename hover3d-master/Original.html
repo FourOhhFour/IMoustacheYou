@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3D Testing</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+			<div class="project-list">
+				<div class="project">
+					<div class="project__card">
+						<a href="" class="project__image"><img src="http://en.es-static.us/upl/2016/05/moon_fast_clouds_Manila_Jv_Noriega_8-1-2012-sq-e1463418211547.jpg" width=600 height=400 alt=""></a>
+						<div class="project__detail">
+							<h2 class="project__title"><a href="#"></a></h2>
+							<small class="project__category"><a href="#"></a></small>
+						</div>
+					</div>
+				</div>
+		</div>
+
+				<div class="column">
+					<div class="movie">
+						<div class="movie__card">
+							<div class="layer-1"></div>
+							<div class="layer-2"></div>
+							<div class="layer-3"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.1.min.js"><\\/script>')</script>
+	<!-- Place this tag right after the last button or just before your close body tag. -->
+	<script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+	<script>window.twttr = (function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0],
+	    t = window.twttr || {};
+	  if (d.getElementById(id)) return t;
+	  js = d.createElement(s);
+	  js.id = id;
+	  js.src = "https://platform.twitter.com/widgets.js";
+	  fjs.parentNode.insertBefore(js, fjs);
+
+	  t._e = [];
+	  t.ready = function(f) {
+	    t._e.push(f);
+	  };
+
+	  return t;
+	}(document, "script", "twitter-wjs"));</script>
+	<script src="dist/js/jquery.hover3d.js" ></script>
+
+	<script>
+		$(document).ready(function(){
+			$(".project").hover3d({
+				selector: ".project__card"
+			});
+
+			$(".movie").hover3d({
+				selector: ".movie__card",
+				shine: true,
+				sensitivity: 20,
+			});
+		});
+
+	</script>
+</body>
+</html>
