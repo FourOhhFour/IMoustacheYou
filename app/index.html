@@ -3,19 +3,105 @@
 
 <head>
   <title>iMoustacheYou</title>
+  <link rel="icon" href="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRYrvL5d7BqS3YhuVdidKs55OF3D3VVZ5SAqEP433aXULZmp54DLw">
   <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" href="css/blockScroll.css">
+  <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
 </head>
 
 <body>
 
-  <img id="picture" src="assets/images/faces.jpg"/>
+  <!--img id="picture" src="assets/images/faces.jpg"/-->
+  <!--<div id="main-wrap">
+        <div>FIRST BLOCK</div>
+        <div>SECOND BLOCK</div>
+        <div>...</div>
+  </div>-->
+
+
+  <div id="main-wrap">
+    <div id="header">
+      <div class="main-page-back">
+        <!--h1 id="main-heading">iMoustacheYou</h1-->
+        <img id="main-img" src="assets/images/iMoustacheYou.png" />
+        <h2 id="sub-heading">Moustache Yourself!</h2>
+        <img id="down-pointer" src="assets/images/down2.png" />
+      </div>
+    </div>
+
+
+
+    <div class="sub-wrap">
+      <div class="grad-back-full">
+        <h3>Step 1</h3>
+        <h2 class="page-header">Choose Image</h2>
+        <div id="output-image">
+          <img src="assets/images/placeholder.png" id="placeholder" />
+        </div>
+        <!--<img src="assets/images/face.jpg" id="uploadedimage"/>-->
+        <input type="file" name="fileUpload" class="inputfile" id="fileUpload" onchange="processFiles()" />
+        <label for="fileUpload">Choose a File</label>
+      </div>
+    </div>
+
+
+
+
+    <div class="sub-wrap">
+      <div class="grad-back-full">
+        <h3>Step 2</h3>
+      <h2 class="page-header">Choose Moustache</h2>
+      <form id="form">
+        <label class="radio-label">
+          <input type="radio" name="moustache" value="0" />
+          <img class="tache" src="assets/images/0.png">
+          <label class="tags">'The Sheriff'</label>
+        </label>
+        <label class="radio-label">
+          <input type="radio" name="moustache" value="1" />
+          <img class="tache" src="assets/images/1.png">
+          <label class="tags">'The Bandit'</label>
+        </label>
+        <label class="radio-label">
+          <input type="radio" name="moustache" value="2" />
+          <img class="tache" src="assets/images/2.png">
+          <label class="tags">'The Outlaw'</label>
+        </label>
+      </form>
+
+      <input type="button" id="finalise-button" value="Done!"/>
+
+      </div>
+    </div>
+
+
+
+    <div class="sub-wrap">
+      <div class="grad-back-full">
+        <h3>Finished Product!</h3>
+        <div id="canvas">
+          <canvas id="myCanvas" height="500px" width="800px"></canvas>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+
+
+
+
+
+
 
 
 
   <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-  <script src="js/jquery.facedetection.min.js"></script>
+  <script src="js/jquery.facedetection.js"></script>
+  <script src="js/blockScroll.js"></script>
   <script src="js/app.js"></script>
-
+  <script src="js/canvas.js"></script>
 </body>
 
 </html>

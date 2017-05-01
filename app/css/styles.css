@@ -1,3 +1,197 @@
-.face {
+@font-face {
+    font-family: Duality;
+    src: url("../assets/fonts/duality.ttf");
+}
+@font-face {
+    font-family: Carnivale;
+    src: url("../assets/fonts/Carnevalee Freakshow.ttf");
+}
+
+.face{
   border: 2px hotpink solid;
+}
+
+*{
+  margin: 0;
+  font-family: 'Arvo', serif;
+  font-family: Duality;
+  color: #00011e;
+}
+
+#header{
+  height: 30vh;
+  width: 100%;
+  background-color: red;
+  background-image: url("../assets/images/texas.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.page-header{
+  font-family: Carnivale;
+  font-size: 10em;
+}
+
+h3{
+  font-size: 50px;
+  color: #c16b52;
+}
+
+.tags{
+  font-size: 40px;
+  color: #c16b52;
+  margin-top: 0;
+}
+
+#main-img{
+  width: 100%;
+  height: auto;
+}
+
+#output-image{
+  max-width: 900px;
+  height: auto;
+  margin: auto;
+}
+
+#output-img{
+  max-width: 100%;
+  height: auto;
+  max-height: 580px;
+  overflow: hidden;
+}
+
+.grad-back{
+  background-color: rgba(220,208,192,0.6);
+  background-color: rgba(191,216,210,0.7);
+  background-color: rgba(124, 142, 166, 0.7);
+}
+
+.grad-back-full{
+  background-color: rgba(220,208,192,0.9);
+  width: 100%;
+  height: 100vh;
+}
+
+.main-page-back{
+  width: 70%;
+  margin:auto;
+  padding: 5%;
+  position: relative;
+}
+
+#down-pointer{
+  position: fixed;
+  left: 45%;
+}
+
+.sub-wrap{
+  height: 50vh;
+  width: 100%;
+  background-color: green;
+  background-image: url("../assets/images/horseshoe.jpg");
+  background-position: center;
+  background-size: cover;
+  margin-top: 10px;
+}
+
+#main-heading{
+  font-size: 250px;
+  font-family: Carnivale;
+  /*color: #bfd8d2;*/
+  color: #df744a;
+  text-shadow: 2px 2px #fedcd2;
+}
+
+#sub-heading{
+  font-size: 80px;
+}
+
+.sub-wrap #uploadedimage{
+  border: 12px black solid;
+  display: inline-block;
+}
+
+.moustache-image{
+  width: 150px;
+  height: 150px;
+}
+
+.tache{
+    width: 300px;
+    height: auto;
+    margin: 1%;
+}
+
+
+/*============================================
+        file input (from https://tympanus.net/codrops/2015/09/15/styling-customizing-file-inputs-smart-way/)
+==============================================*/
+
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+.inputfile + label {
+    font-size: 4em;
+    font-weight: 700;
+    background-color: rgba(124,142,166,0.6);
+    display: inline-block;
+    padding: 1%;
+    margin-top: 1%;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+    background-color: rgba(193,107,82,0.5);
+    box-shadow: 1px 1px 8px rgba(0,1,30,0.6);
+}
+.inputfile + label {
+	cursor: pointer; /* "hand" cursor */
+}
+
+
+/*=============================================================
+          radion buttons (from http://stackoverflow.com/questions/17541614/use-image-instead-of-radio-button)
+===============================================================*/
+.radio-label > input{ /* HIDE RADIO */
+  visibility: hidden; /* Makes input not-clickable */
+  position: absolute; /* Remove input from document flow */
+}
+.radio-label > input + img{ /* IMAGE STYLES */
+  max-width: 400px;
+  max-height: 200px;
+  height: auto;
+  cursor:pointer;
+  border:2px solid transparent;
+}
+.radio-label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+  border:2px solid #c16b52;
+}
+
+.radio-label{
+  display:block;
+}
+
+/*=============================================================
+          'Done' button (from http://css3buttongenerator.com/
+===============================================================*/
+
+#finalise-button {
+  background-color: rgba(124,142,166,0.6);
+  /*background-image: linear-gradient(to bottom, rgb(124,142,166), #1e242c);*/
+  font-size: 4em;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#finalise-button:hover {
+  background-color: rgba(193,107,82,0.5);
+  box-shadow: 1px 1px 8px rgba(0,1,30,0.6);
+  text-decoration: none;
 }
